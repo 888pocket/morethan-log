@@ -7,15 +7,15 @@ const CONFIG = {
     bio: `FE - 리액트, 타입스크립트, php
 BE - 자바 스프링, php
 Android - 자바`,
-    email: "morethanmin.dev@gmail.com",
+    email: "888develop888.dev@gmail.com",
     linkedin: "morethanmin",
-    github: "morethanmin",
+    github: "888pocket",
     instagram: "",
   },
   projects: [
     {
       name: `morethan-log`,
-      href: "https://github.com/morethanmin/morethan-log",
+      href: "https://github.com/888pocket/morethan-log",
     },
   ],
   // blog setting (required)
@@ -25,7 +25,7 @@ Android - 자바`,
   },
 
   // CONFIG configration (required)
-  link: "https://morethan-log.vercel.app",
+  link: "https://jsa-dev.vercel.app",
   since: 2022, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
