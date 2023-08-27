@@ -21,6 +21,7 @@ export default async function handler(
       const posts = await getPosts()
       temp = posts
       const revalidateRequests = posts.map((row) => {
+        res.revalidate(`/`)
         res.revalidate(`/${row.slug}`)
         console.log(row.slug)
       })
