@@ -9,24 +9,24 @@ import { GetStaticProps } from "next"
 import { dehydrate } from "@tanstack/react-query"
 import { filterPosts } from "src/libs/utils/notion"
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const posts = filterPosts(await getPosts())
-//   await queryClient.prefetchQuery(queryKey.posts(), () => posts)
-
-//   return {
-//     props: {
-//       dehydratedState: dehydrate(queryClient),
-//     },
-//     revalidate: CONFIG.revalidateTime,
-//   }
-// }
-
-export async function getServerSideProps(context: any) {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = filterPosts(await getPosts())
   await queryClient.prefetchQuery(queryKey.posts(), () => posts)
 
-  return { props: { dehydratedState: dehydrate(queryClient) } }
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+    revalidate: CONFIG.revalidateTime,
+  }
 }
+
+// export async function getServerSideProps(context: any) {
+//   const posts = filterPosts(await getPosts())
+//   await queryClient.prefetchQuery(queryKey.posts(), () => posts)
+
+//   return { props: { dehydratedState: dehydrate(queryClient) } }
+// }
 
 const FeedPage: NextPageWithLayout = () => {
   const meta = {
