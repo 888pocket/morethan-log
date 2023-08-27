@@ -18,13 +18,13 @@ export default async function handler(
       await res.revalidate(path)
     } else {
       const posts = await getPosts()
-      const revalidateRequests = posts.map((row) =>
+      const revalidateRequests = posts.map((row) => {
         res.revalidate(`/${row.slug}`)
+      })
+      await Promise.all(revalidateRequests).then(() =>
+        res.json({ revalidated: true })
       )
-      await Promise.all(revalidateRequests)
     }
-
-    res.json({ revalidated: true })
   } catch (err) {
     return res.status(500).send("Error revalidating")
   }
