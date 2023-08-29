@@ -8,7 +8,7 @@ const CONFIG = {
 BE - 자바 스프링, php
 Android - 자바`,
     email: "888develop888.dev@gmail.com",
-    // linkedin: "morethanmin",
+    linkedin: "morethanmin",
     github: "888pocket",
     instagram: "",
   },
