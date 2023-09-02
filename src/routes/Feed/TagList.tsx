@@ -92,7 +92,7 @@ const StyledWrapper = styled.div`
       border-radius: 0.75rem;
       font-size: 0.875rem;
       line-height: 1.25rem;
-      color: ${({ theme }) => theme.colors.gray10};
+      color: ${({ theme }) => theme.colors.gray11};
       flex-shrink: 0;
       cursor: pointer;
 
