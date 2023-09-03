@@ -19,7 +19,7 @@ const ProfileCard: React.FC<Props> = () => {
         <div className="mid">
           <div className="name">{CONFIG.profile.name}</div>
           <div className="role">{CONFIG.profile.role}</div>
-          <div className="bio text-sm mb-2">{CONFIG.profile.bio}</div>
+          {/* <div className="bio text-sm mb-2">{CONFIG.profile.bio}</div> */}
         </div>
       </div>
     </StyledWrapper>

@@ -44,7 +44,7 @@ const ContactCard: React.FC = () => {
             <div className="name">email</div>
           </a>
         )}
-        {CONFIG.profile.linkedin && (
+        {/* {CONFIG.profile.linkedin && (
           <a
             href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
             rel="noreferrer"
@@ -53,7 +53,7 @@ const ContactCard: React.FC = () => {
             <AiFillLinkedin className="icon" />
             <div className="name">linkedin</div>
           </a>
-        )}
+        )} */}
       </StyledWrapper>
     </>
   )
